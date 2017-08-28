@@ -6,14 +6,17 @@
     
     <x:StatusBar ios:barStyle="light" barColor="#303030" />
 
-    <ActionBar title="Home">
+    <ActionBar title="Home" style="background-color: #6F6F6F;" >
+        <android>
+            <NavigationButton icon="res://ic_menu_white_24dp" tap="toggleDrawer" id="navigationButton" />
+        </android>
         <ActionBar.actionItems>
             <ActionItem tap="{{ clear }}" ios.systemIcon="16" ios.position="right" text="bla" android.position="popup" class="color-white" />
             <ActionItem tap="{{ paste }}" ios.systemIcon="16" ios.position="right" text="blubb" android.position="popup" class="color-white" />
         </ActionBar.actionItems>
     </ActionBar>
 
-    <sd:RadSideDrawer id="sideDrawer" showOverNavigation="false">
+    <sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
 
         <!-- side drawer content -->
         <sd:RadSideDrawer.drawerContent>

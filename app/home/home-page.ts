@@ -17,11 +17,16 @@ export function onNavigatingTo(args: NavigatedData) {
     console.log('onNavigatingTo(), drawer: ' + drawer);
 }
 
+export function toggleDrawer() {
+    drawer.toggleDrawerState();
+};
+
+
 export function toggleActionBar() {
     const hidden: boolean = !page.actionBarHidden 
     page.actionBarHidden = hidden;
     console.log('toggleActionBar(), page.actionBarHidden: ' + page.actionBarHidden);
-    
+
     /*drawer.showOverNavigation = !hidden;
     console.log('toggleActionBar(), drawer.showOverNavigation: ' + drawer.showOverNavigation);*/
 }

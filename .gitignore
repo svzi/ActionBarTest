@@ -1,0 +1,13 @@
+app/**/*.js
+app/**/*.js.map
+app/app.js
+app/app.js.map
+!app/helper.js
+lib/
+!node_modules/
+node_modules/*
+!node_modules/nativescript-dynamicloader/
+platforms/
+tmp/
+*.apk
+BUILD COMMAND LINE.txt
