@@ -1,0 +1,39 @@
+<Page
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:x="nativescript-statusbar"
+    xmlns:sd="nativescript-telerik-ui/sidedrawer">
+    
+    <x:StatusBar ios:barStyle="light" barColor="#303030" />
+
+    <ActionBar title="Home">
+        <ActionBar.actionItems>
+            <ActionItem tap="{{ clear }}" ios.systemIcon="16" ios.position="right" text="bla" android.position="popup" class="color-white" />
+            <ActionItem tap="{{ paste }}" ios.systemIcon="16" ios.position="right" text="blubb" android.position="popup" class="color-white" />
+        </ActionBar.actionItems>
+    </ActionBar>
+
+    <sd:RadSideDrawer id="sideDrawer" showOverNavigation="false">
+
+        <!-- side drawer content -->
+        <sd:RadSideDrawer.drawerContent>
+            <StackLayout style="background-color: green;">
+                <Label text="Test" textWrap="true" />
+            </StackLayout>
+            
+        </sd:RadSideDrawer.drawerContent>
+
+        <!-- The main content -->
+        <sd:RadSideDrawer.mainContent>
+
+            <StackLayout>
+                <Label text="Ich bin ein Test-Label" textWrap="true" />
+                
+                <Button text="Toggle Actionbar" tap="toggleActionBar" />
+            </StackLayout>
+
+        </sd:RadSideDrawer.mainContent>
+
+    </sd:RadSideDrawer>
+
+</Page>
